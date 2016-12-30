@@ -16,14 +16,14 @@ public class CachingConfig {
   @Bean
   public EhCacheCacheManager cacheManager(CacheManager cm) {
     return new EhCacheCacheManager(cm);
-  } /*声明缓存管理器*/
+  } /*配置EhCacheManager*/
 
   @Bean
-  public EhCacheManagerFactoryBean ehcache() {
+  public EhCacheManagerFactoryBean ehcache() {   /*EhCacheManagerFactoryBean*/
     EhCacheManagerFactoryBean ehCacheFactoryBean = 
         new EhCacheManagerFactoryBean();
     ehCacheFactoryBean.setConfigLocation(
-        new ClassPathResource("spittr/cache/ehcache.xml"));
+        new ClassPathResource("spittr/cache/ehcache.xml"));/*指明EhCache XML配置文件*/
     return ehCacheFactoryBean;
   }
   

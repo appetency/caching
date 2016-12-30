@@ -1,3 +1,4 @@
+<!--最大的堆存储50MB，存活时间为100秒。-->
 <ehcache>
   <cache name="spittleCache"
           maxBytesLocalHeap="50m"
